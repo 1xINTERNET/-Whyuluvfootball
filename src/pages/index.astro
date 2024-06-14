@@ -1,17 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import CustomSection from '../components/CustomSection.astro';
 ---
 
 <Layout title="Welcome to Whyuluvfootball">
 		<h1>About <span class="text-gradient">300 million</span> kids worldwide don't have a football.</h1>
+		<CustomSection kicker='kicker' title="This is the title" text="This is the text area" color='green' />
 
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-		</ul>
 </Layout>
 
