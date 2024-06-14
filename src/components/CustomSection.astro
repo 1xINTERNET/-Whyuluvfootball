@@ -1,0 +1,23 @@
+---
+interface Props {
+    kicker?: string;
+    title?: string;
+    text?: string;
+    color: "blue" | "green"
+}
+
+const { kicker, title, text, color  } = Astro.props;
+---
+
+<section class="bg-green">
+  <div class="container mx-auto flex flex-col items-center py-8 px-4 sm:py-12 sm:px-8 lg:py-16 lg:px-28">
+    
+    
+    <span>{kicker}</span>
+    <h4>{title}</h4>
+    <p>{text}</p>
+  
+  
+  
+  </div>
+</section>
