@@ -26,5 +26,6 @@ export default {
   safelist: [
     'bg-blue',
     'bg-green',
+    'bg-[url(\'/images/football.jpeg\')]'
   ]
 };
