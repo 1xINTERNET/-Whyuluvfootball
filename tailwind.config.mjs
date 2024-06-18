@@ -17,7 +17,14 @@ export default {
       fontFamily: {
         sans: ["Stolzl", ...defaultTheme.fontFamily.sans],
       },
+      boxShadow: {
+        'flat': '5px 5px rgba(0, 0, 0, 0.25)',
+      }
     },
   },
   plugins: [],
+  safelist: [
+    'bg-blue',
+    'bg-green',
+  ]
 };

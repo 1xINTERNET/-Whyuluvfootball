@@ -1,6 +1,20 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import "@styles/global.css";
+import Section from "../components/Section.astro";
 ---
 
-<Layout title="Welcome to Whyuluvfootball" />
+<Layout title="Welcome to Whyuluvfootball">
+  <Section
+    backgroundColor="green"
+    eyebrow="Our goal"
+    heading="Our goal is to donate 10 million balls to children around the world."
+    links={[
+      { href: "https://gofund.me/96424540", text: "GoFundMe" },
+      {
+        href: "https://www.betterplace.me/why-do-you-love-football",
+        text: "Betterplace",
+      },
+    ]}
+  />
+</Layout>

@@ -1,6 +1,8 @@
 ---
 import PrimaryLink from "./PrimaryLink.astro";
 
+import footballImage from "../assets/images/football.jpeg";
+
 interface Props {
   backgroundColor: "blue" | "green";
   backgroundImage?: string;
@@ -14,13 +16,15 @@ interface Props {
 
 const { backgroundColor, backgroundImage, eyebrow, heading, links } =
   Astro.props;
+
+const backgroundFootballImage = backgroundImage
+  ? `url('${footballImage.src}')`
+  : "none";
 ---
 
 <section
-  class={backgroundImage
-    ? `bg-cover p-6 sm:p-12 h-full`
-    : `bg-${backgroundColor} p-6 sm:p-12`}
-  style=`background-image: url('${backgroundImage}')`
+  class=`bg-${backgroundColor} bg-cover p-6 sm:p-12`
+  style=`background-image: ${backgroundFootballImage}`
 >
   <div
     class={`container flex flex-col gap-6 sm:gap-12 items-center justify-center mx-auto ${backgroundImage ? "text-light-lilac" : backgroundColor === "green" ? "text-blue" : "text-green"}`}
