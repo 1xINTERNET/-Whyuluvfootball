@@ -4,38 +4,38 @@
 
 @layer base {
   @font-face {
-    font-family: 'Stolzl';
-    src: url('/fonts/Stolzl-Light.ttf') format('truetype');
+    font-family: "Stolzl";
+    src: url("/fonts/Stolzl-Light.ttf") format("truetype");
     font-weight: lighter;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
-    font-family: 'Stolzl';
-    src: url('/fonts/Stolzl-Book.ttf') format('truetype');
+    font-family: "Stolzl";
+    src: url("/fonts/Stolzl-Book.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
   @font-face {
-    font-family: 'Stolzl';
-    src: url('/fonts/Stolzl-Regular.ttf') format('truetype');
+    font-family: "Stolzl";
+    src: url("/fonts/Stolzl-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Stolzl';
-    src: url('/fonts/Stolzl-Medium.ttf') format('truetype');
+    font-family: "Stolzl";
+    src: url("/fonts/Stolzl-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Stolzl';
-    src: url('/fonts/Stolzl-Bold.ttf') format('truetype');
+    font-family: "Stolzl";
+    src: url("/fonts/Stolzl-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -53,7 +53,8 @@
     @apply text-[32px] leading-[48px];
   }
 
-  body, p {
+  body,
+  p {
     @apply text-[18px] leading-6;
   }
 }
