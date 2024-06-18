@@ -3,18 +3,39 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
 ---
 
 <nav class="bg-transparent">
-  <div class="container flex flex-wrap items-center justify-between mx-auto p-4">
+  <div
+    class="container flex flex-wrap items-center justify-between mx-auto p-4"
+  >
     <a href="https://whyuluvfootball.world/">
-        <HashtagWhyULoveFootball />
+      <HashtagWhyULoveFootball />
     </a>
     <button id="open-mobile-menu" type="button" class="lg:hidden">
-        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="#54F400" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
+      <svg
+        class="w-6 h-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="#54F400"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
     </button>
-    <div class="hidden absolute top-0 right-0 bottom-0 left-0 bg-blue lg:bg-transparent lg:static lg:block lg:w-auto" id="navbar">
-      <button id="close-mobile-menu" class="absolute right-2 top-2 text-2xl text-green p-3 lg:hidden">X</button>
-      <ul class="font-medium text-3xl px-4 pt-14 flex flex-col lg:p-0 lg:text-lg lg:flex-row gap-8 lg:gap-12">
+    <div
+      class="hidden absolute top-0 right-0 bottom-0 left-0 bg-blue lg:bg-transparent lg:static lg:block lg:w-auto"
+      id="navbar"
+    >
+      <button
+        id="close-mobile-menu"
+        class="absolute right-2 top-2 text-2xl text-green p-3 lg:hidden"
+        >X</button
+      >
+      <ul
+        class="font-medium text-3xl px-4 pt-14 flex flex-col lg:p-0 lg:text-lg lg:flex-row gap-8 lg:gap-12"
+      >
         <li>
           <a href="#our-goal" class="block text-green">Our Goal</a>
         </li>
@@ -25,7 +46,9 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
           <a href="#partners" class="block text-green">Partners</a>
         </li>
         <li>
-          <a href="#social-media-news" class="block text-green">Social Media News</a>
+          <a href="#social-media-news" class="block text-green"
+            >Social Media News</a
+          >
         </li>
         <li>
           <a href="/media-requests" class="block text-green">Media Requests</a>
@@ -41,11 +64,13 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
   var closeButton = document.getElementById("close-mobile-menu");
 
   if (navBar && openButton && closeButton) {
-    openButton.addEventListener('click', () => {
-      navBar?.classList.contains('hidden') ? navBar.classList.remove('hidden') : navBar?.classList.add('hidden');
+    openButton.addEventListener("click", () => {
+      navBar?.classList.contains("hidden")
+        ? navBar.classList.remove("hidden")
+        : navBar?.classList.add("hidden");
     });
-    closeButton.addEventListener('click', () => {
-      navBar?.classList.add('hidden');
+    closeButton.addEventListener("click", () => {
+      navBar?.classList.add("hidden");
     });
   }
-  </script>
+</script>

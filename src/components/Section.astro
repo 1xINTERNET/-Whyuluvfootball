@@ -1,28 +1,41 @@
 ---
-import PrimaryLink from './PrimaryLink.astro';
+import PrimaryLink from "./PrimaryLink.astro";
 
 interface Props {
-  backgroundColor: "blue" | "green"
-  backgroundImage?: string
+  backgroundColor: "blue" | "green";
+  backgroundImage?: string;
   eyebrow?: string;
   heading?: string;
   links?: {
-    href: string,
-    text: string,
-  }[]
+    href: string;
+    text: string;
+  }[];
 }
 
-const { backgroundColor,backgroundImage, eyebrow, heading, links } = Astro.props;
+const { backgroundColor, backgroundImage, eyebrow, heading, links } =
+  Astro.props;
 ---
-<section class={backgroundImage ? `bg-cover p-6 sm:p-12 h-full` : `bg-${backgroundColor} p-6 sm:p-12`} style=`background-image: url('${backgroundImage}')`>
-  <div class={`container flex flex-col gap-6 sm:gap-12 items-center justify-center mx-auto ${backgroundImage ? 'text-light-lilac' : backgroundColor === 'green' ? 'text-blue' : 'text-green'}`}>
+
+<section
+  class={backgroundImage
+    ? `bg-cover p-6 sm:p-12 h-full`
+    : `bg-${backgroundColor} p-6 sm:p-12`}
+  style=`background-image: url('${backgroundImage}')`
+>
+  <div
+    class={`container flex flex-col gap-6 sm:gap-12 items-center justify-center mx-auto ${backgroundImage ? "text-light-lilac" : backgroundColor === "green" ? "text-blue" : "text-green"}`}
+  >
     <div class="uppercase font-bold text-sm tracking-[3px]">{eyebrow}</div>
     <div class="text-3xl sm:text-5xl text-center">{heading}</div>
     <slot />
-    {links && <div class="flex gap-6">
-      {links?.map((link) => (
-        <PrimaryLink href={link.href} text={link.text}/>
-      ))}
-    </div>}
+    {
+      links && (
+        <div class="flex gap-6">
+          {links?.map((link) => (
+            <PrimaryLink href={link.href} text={link.text} />
+          ))}
+        </div>
+      )
+    }
   </div>
 </section>

@@ -1,10 +1,10 @@
 ---
-import Footer from '@components/Footer.astro';
-import NavigationBar from '@components/NavigationBar.astro';
-import Section from '@components/Section.astro';
+import Footer from "@components/Footer.astro";
+import NavigationBar from "@components/NavigationBar.astro";
+import Section from "@components/Section.astro";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -12,22 +12,31 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Whyuluvfootball website" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<main>
-			<NavigationBar />
-			<Section backgroundColor='green' backgroundImage='../images/football.jpeg' eyebrow='Our goal' heading="Our goal is to donate 10 million balls to children around the world." links={[{href: 'https://example.com', text: 'Link'}, {href: 'https://example.com', text: 'Link'}]}>
-				Slot content
-			</Section>
-			<slot />
-			<Footer />
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Whyuluvfootball website" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <NavigationBar />
+      <Section
+        backgroundColor="green"
+        backgroundImage="../images/football.jpeg"
+        eyebrow="Our goal"
+        heading="Our goal is to donate 10 million balls to children around the world."
+        links={[
+          { href: "https://example.com", text: "Link" },
+          { href: "https://example.com", text: "Link" },
+        ]}
+      >
+        Slot content
+      </Section>
+      <slot />
+      <Footer />
+    </main>
+  </body>
 </html>
