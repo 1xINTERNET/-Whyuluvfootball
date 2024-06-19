@@ -9,5 +9,5 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
-  base: import.meta.env.DEV ? "/" : "Whyuluvfootball",
+  base: process.env.BASE_URL ? process.env.BASE_URL : "/",
 });
