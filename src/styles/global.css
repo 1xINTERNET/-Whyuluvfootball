@@ -63,4 +63,8 @@
       @apply text-[36px] leading-[48px];
     }
   }
+  
+  iframe {
+    @apply aspect-video;
+  }
 }

@@ -66,6 +66,7 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
   var navBar_container = document.getElementById("navbar-container");
   var hero_text = document.getElementById("hero-text");
   var footer = document.getElementById("footer");
+  var menuItems = document.querySelectorAll("#navbar li");
 
   if (navBar && openButton && closeButton) {
     openButton.addEventListener("click", () => {
@@ -92,5 +93,12 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
       hero_text?.classList.add("absolute");
       footer?.classList.remove("hidden");
     });
+    menuItems.forEach((item) =>
+      item.addEventListener("click", () => {
+        if (!navBar?.classList.contains("hidden")) {
+          navBar?.classList.add("hidden");
+        }
+      }),
+    );
   }
 </script>
