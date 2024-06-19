@@ -57,4 +57,10 @@
   p {
     @apply text-[18px] leading-6;
   }
+
+  @media only screen and (max-width: 768px) {
+    h1 {
+      @apply text-[36px] leading-[48px];
+    }
+  }
 }
