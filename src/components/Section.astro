@@ -20,9 +20,13 @@ const { backgroundColor, backgroundImage, eyebrow, heading, links } =
   class={`bg-${backgroundImage ? `[url('${backgroundImage}')]` : backgroundColor} bg-cover p-6 sm:p-12`}
 >
   <div
-    class={`container flex flex-col gap-6 sm:gap-12 items-center justify-center mx-auto ${backgroundImage ? "text-light-lilac" : backgroundColor === "green" ? "text-blue" : "text-green"}`}
+    class={`container flex flex-col gap-6 sm:gap-12 items-center justify-center mx-auto ${backgroundImage ? "text-light-lilac" : backgroundColor === "green" ? "text-blue" : "text-white"}`}
   >
-    <div class="uppercase font-bold text-sm tracking-[3px]">{eyebrow}</div>
+    <div
+      class=`uppercase font-bold text-sm ${backgroundColor === "green" ? "text-blue" : "text-green"} tracking-[3px]`
+    >
+      {eyebrow}
+    </div>
     <div class="text-3xl sm:text-5xl text-center">{heading}</div>
     <slot />
     {

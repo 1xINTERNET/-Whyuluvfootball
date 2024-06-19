@@ -1,0 +1,28 @@
+---
+import IconChevronRight from "@icons/IconChevronRight.astro";
+---
+
+<iframe class="w-full" src="https://www.youtube.com/embed/LyVeknDDQCw"></iframe>
+<div>
+  <div class="flex gap-3 items-center mb-3">
+    <span>More videos</span>
+    <div class="w-3 h-3">
+      <IconChevronRight />
+    </div>
+  </div>
+  <div class="relative">
+    <div class="flex gap-3 relative overflow-x-scroll">
+      <iframe class="w-2/5" src="https://www.youtube.com/embed/Fxb9bgPpnys"
+      ></iframe>
+      <iframe class="w-2/5" src="https://www.youtube.com/embed/x2fNlaTvd60"
+      ></iframe>
+      <iframe class="w-2/5" src="https://www.youtube.com/embed/wFAazFeFgOY"
+      ></iframe>
+      <div class="min-w-[40%] min-h-full"></div>
+    </div>
+    <div
+      class="absolute bg-gradient-to-r from-transparent to-blue h-full ml-auto top-0 right-0 w-1/5"
+    >
+    </div>
+  </div>
+</div>
