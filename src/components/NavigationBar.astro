@@ -62,6 +62,10 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
   var navBar = document.getElementById("navbar");
   var openButton = document.getElementById("open-mobile-menu");
   var closeButton = document.getElementById("close-mobile-menu");
+  var hero = document.getElementById("hero");
+  var navBar_container = document.getElementById("navbar-container");
+  var hero_text = document.getElementById("hero-text");
+  var footer = document.getElementById("footer");
   var menuItems = document.querySelectorAll("#navbar li");
 
   if (navBar && openButton && closeButton) {
@@ -69,9 +73,25 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
       navBar?.classList.contains("hidden")
         ? navBar.classList.remove("hidden")
         : navBar?.classList.add("hidden");
+      hero?.classList.contains("relative")
+        ? hero.classList.remove("relative")
+        : hero?.classList.add("relative");
+      navBar_container?.classList.contains("absolute")
+        ? navBar_container.classList.remove("absolute", "left-0", "right-0")
+        : navBar_container?.classList.add("absolute", "left-0", "right-0");
+      hero_text?.classList.contains("absolute")
+        ? hero_text.classList.remove("absolute")
+        : hero_text?.classList.add("absolute");
+      footer?.classList.contains("hidden")
+        ? footer.classList.remove("hidden")
+        : footer?.classList.add("hidden");
     });
     closeButton.addEventListener("click", () => {
       navBar?.classList.add("hidden");
+      hero?.classList.add("relative");
+      navBar_container?.classList.add("absolute", "left-0", "right-0");
+      hero_text?.classList.add("absolute");
+      footer?.classList.remove("hidden");
     });
     menuItems.forEach((item) =>
       item.addEventListener("click", () => {
