@@ -22,7 +22,9 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
   safelist: [
     'bg-blue',
     'bg-green',

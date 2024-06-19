@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import "@styles/global.css";
 import Section from "../components/Section.astro";
+import VideoPlayer from "../components/VideoPlayer.astro";
 ---
 
 <Layout title="Welcome to Whyuluvfootball">
@@ -17,4 +18,11 @@ import Section from "../components/Section.astro";
       },
     ]}
   />
+  <Section
+    backgroundColor="blue"
+    eyebrow="Videos"
+    heading="I love football because..."
+  >
+    <VideoPlayer />
+  </Section>
 </Layout>
