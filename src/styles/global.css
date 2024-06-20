@@ -6,7 +6,7 @@
   @font-face {
     font-family: "Stolzl";
     src: url("/fonts/Stolzl-Light.ttf") format("truetype");
-    font-weight: lighter;
+    font-weight: light;
     font-style: normal;
     font-display: swap;
   }
@@ -46,7 +46,7 @@
   }
 
   h2 {
-    @apply text-[44px] leading-[64px];
+    @apply text-[48px] leading-[64px];
   }
 
   h3 {
@@ -58,12 +58,15 @@
     @apply text-[18px] leading-6;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 640px) {
     h1 {
       @apply text-[36px] leading-[48px];
     }
+    h2 {
+      @apply text-[32px] leading-[40px];
+    }
   }
-  
+
   iframe {
     @apply aspect-video;
   }
