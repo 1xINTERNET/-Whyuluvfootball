@@ -9,7 +9,7 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
     <a href="https://whyuluvfootball.world/">
       <HashtagWhyULoveFootball />
     </a>
-    <button id="open-mobile-menu" type="button" class="lg:hidden">
+    <button id="open-mobile-menu" type="button" class="xl:hidden">
       <svg
         class="w-6 h-6"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,16 +25,16 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
       </svg>
     </button>
     <div
-      class="hidden absolute top-0 right-0 bottom-0 left-0 bg-blue lg:bg-transparent lg:static lg:block lg:w-auto"
+      class="hidden absolute top-0 right-0 bottom-0 left-0 bg-blue xl:bg-transparent xl:static xl:block xl:w-auto"
       id="navbar"
     >
       <button
         id="close-mobile-menu"
-        class="absolute right-2 top-2 text-2xl text-green p-3 lg:hidden"
+        class="absolute right-2 top-2 text-2xl text-green p-3 xl:hidden"
         >X</button
       >
       <ul
-        class="font-medium text-3xl px-4 pt-14 flex flex-col lg:p-0 lg:text-lg lg:flex-row gap-8 lg:gap-12"
+        class="font-medium text-3xl px-4 pt-14 flex flex-col xl:p-0 xl:text-xl xl:flex-row gap-8 xl:gap-12"
       >
         <li>
           <a href="#our-goal" class="block text-green">Our Goal</a>
@@ -70,6 +70,8 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
 
   if (navBar && openButton && closeButton) {
     openButton.addEventListener("click", () => {
+      navBar.style.height = window.innerHeight + "px";
+      document.body.style.overflow = "hidden";
       navBar?.classList.contains("hidden")
         ? navBar.classList.remove("hidden")
         : navBar?.classList.add("hidden");
@@ -87,6 +89,7 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
         : footer?.classList.add("hidden");
     });
     closeButton.addEventListener("click", () => {
+      document.body.style.overflow = "auto";
       navBar?.classList.add("hidden");
       hero?.classList.add("relative");
       navBar_container?.classList.add("absolute", "left-0", "right-0");
@@ -97,6 +100,10 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
       item.addEventListener("click", () => {
         if (!navBar?.classList.contains("hidden")) {
           navBar?.classList.add("hidden");
+          hero?.classList.add("relative");
+          navBar_container?.classList.add("absolute", "left-0", "right-0");
+          hero_text?.classList.add("absolute");
+          footer?.classList.remove("hidden");
         }
       }),
     );
