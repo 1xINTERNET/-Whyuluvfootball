@@ -99,6 +99,7 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
     menuItems.forEach((item) =>
       item.addEventListener("click", () => {
         if (!navBar?.classList.contains("hidden")) {
+          document.body.style.overflow = "auto";
           navBar?.classList.add("hidden");
           hero?.classList.add("relative");
           navBar_container?.classList.add("absolute", "left-0", "right-0");
