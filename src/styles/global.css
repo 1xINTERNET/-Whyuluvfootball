@@ -58,10 +58,12 @@
     @apply text-[18px] leading-6;
   }
 
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 920px) {
     h1 {
       @apply text-[36px] leading-[48px];
     }
+  }
+  @media only screen and (max-width: 640px) {
     h2 {
       @apply text-[32px] leading-[40px];
     }
