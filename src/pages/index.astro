@@ -3,6 +3,8 @@ import Layout from "@layouts/Layout.astro";
 import "@styles/global.css";
 import Section from "../components/Section.astro";
 import VideoPlayer from "../components/VideoPlayer.astro";
+import HowToHelp from "../components/HowToHelp.astro";
+import AboutUs from "../components/AboutUs.astro";
 ---
 
 <Layout title="Welcome to Whyuluvfootball">
@@ -23,8 +25,20 @@ import VideoPlayer from "../components/VideoPlayer.astro";
     backgroundColor="blue"
     eyebrow="Videos"
     heading="I love football because..."
+    id="videos"
   >
     <VideoPlayer />
+  </Section>
+  <Section
+    backgroundColor="green"
+    eyebrow="How to help"
+    heading=""
+    id="how-to-help"
+  >
+    <HowToHelp />
+  </Section>
+  <Section backgroundColor="blue" eyebrow="About us" heading="" id="about-us">
+    <AboutUs />
   </Section>
   <Section
     backgroundColor="green"
