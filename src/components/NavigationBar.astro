@@ -59,7 +59,7 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
 </nav>
 
 <script>
-  var navBar = document.getElementById("navbar");
+  var navBar = document.getElementById("navbar")!;
   var openButton = document.getElementById("open-mobile-menu");
   var closeButton = document.getElementById("close-mobile-menu");
   var hero = document.getElementById("hero");
@@ -67,6 +67,7 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
   var hero_text = document.getElementById("hero-text");
   var footer = document.getElementById("footer");
   var menuItems = document.querySelectorAll("#navbar li");
+  navBar.style.height = "0";
 
   if (navBar && openButton && closeButton) {
     openButton.addEventListener("click", () => {
