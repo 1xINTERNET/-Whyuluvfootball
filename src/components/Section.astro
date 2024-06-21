@@ -4,20 +4,32 @@ import PrimaryLink from "./PrimaryLink.astro";
 interface Props {
   backgroundColor: "blue" | "green";
   backgroundImage?: string;
+  contentImage?: string;
   eyebrow?: string;
   heading?: string;
+  id?: string;
   links?: {
     href: string;
     text: string;
   }[];
+  subheading?: string;
 }
 
-const { backgroundColor, backgroundImage, eyebrow, heading, links } =
-  Astro.props;
+const {
+  backgroundColor,
+  backgroundImage,
+  contentImage,
+  eyebrow,
+  heading,
+  id,
+  links,
+  subheading,
+} = Astro.props;
 ---
 
 <section
   class={`bg-${backgroundImage ? `[url('${backgroundImage}')]` : backgroundColor} bg-cover p-6 sm:p-12`}
+  id={id}
 >
   <div
     class={`container flex flex-col gap-6 sm:gap-12 items-center justify-center mx-auto ${backgroundImage ? "text-light-lilac" : backgroundColor === "green" ? "text-blue" : "text-white"}`}
@@ -27,16 +39,38 @@ const { backgroundColor, backgroundImage, eyebrow, heading, links } =
     >
       {eyebrow}
     </div>
-    <div class="text-3xl sm:text-5xl text-center">{heading}</div>
-    <slot />
-    {
-      links && (
-        <div class="flex gap-6">
-          {links?.map((link) => (
-            <PrimaryLink href={link.href} text={link.text} />
-          ))}
+    <div
+      class=`flex flex-col sm:flex-row gap-6 sm:gap-12 sm:gap-24 items-center`
+    >
+      {
+        contentImage && (
+          <img
+            class="min-w-0 object-cover sm:max-lg:hidden"
+            src={contentImage}
+            alt=""
+          />
+        )
+      }
+      <div
+        class=`flex flex-col gap-6 sm:gap-12 items-center ${contentImage ? 'sm:items-start' : ''}`
+      >
+        <div
+          class=`flex flex-col items-center text-center ${contentImage ? 'sm:items-start sm:text-left' : ''}`
+        >
+          <h2>{heading}</h2>
+          {subheading && <h2 class="font-light">{subheading}</h2>}
         </div>
-      )
-    }
+        <slot />
+        {
+          links && (
+            <div class="flex flex-col sm:flex-row gap-6">
+              {links?.map((link) => (
+                <PrimaryLink href={link.href} text={link.text} />
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
   </div>
 </section>

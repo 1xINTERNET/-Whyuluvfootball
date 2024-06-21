@@ -12,11 +12,11 @@ import VideoPlayer from "../components/VideoPlayer.astro";
     heading="Our goal is to donate 10 million balls to children around the world."
     id="our-goal"
     links={[
-      { href: "https://gofund.me/96424540", text: "GoFundMe" },
       {
         href: "https://www.betterplace.me/why-do-you-love-football",
         text: "Betterplace",
       },
+      { href: "https://gofund.me/96424540", text: "GoFundMe" },
     ]}
   />
   <Section
@@ -26,4 +26,18 @@ import VideoPlayer from "../components/VideoPlayer.astro";
   >
     <VideoPlayer />
   </Section>
+  <Section
+    backgroundColor="green"
+    contentImage="/images/goal.jpeg"
+    eyebrow="Donations"
+    heading="Let's get every child a football."
+    links={[
+      {
+        href: "https://www.betterplace.me/why-do-you-love-football",
+        text: "Betterplace",
+      },
+      { href: "https://gofund.me/96424540", text: "GoFundMe" },
+    ]}
+    subheading="Donate now on"
+  />
 </Layout>
