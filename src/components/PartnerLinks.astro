@@ -65,12 +65,12 @@
       a.classList.add("partner-link");
       a.setAttribute("data-size", _randomSize);
       a.style.backgroundColor = this.getAttribute("color") ?? "white";
-      a.href = this.getAttribute("url");
+      a.href = this.getAttribute("url") ?? "";
       a.setAttribute("target", "_blank");
-      a.setAttribute("title", this.getAttribute("brand"));
+      a.setAttribute("title", this.getAttribute("brand") ?? "");
       this.appendChild(a);
       const img = document.createElement("img");
-      img.src = this.getAttribute("logo");
+      img.src = this.getAttribute("logo") ?? "";
       a.appendChild(img);
     }
   }
