@@ -1,0 +1,14 @@
+---
+interface Props {
+  logo: string;
+  name: string;
+  size: number;
+  url: string;
+}
+
+const { logo, name, size, url } = Astro.props;
+---
+
+<a class="partner-link" href={url} data-size={size} title={name} target="_blank"
+  ><img src={logo} /></a
+>

@@ -71,3 +71,36 @@
     @apply aspect-video;
   }
 }
+
+@layer components {
+  .partner-links {
+    @apply gap-4 grid grid-cols-5;
+  }
+  .partner-links div {
+    @apply flex flex-col gap-4 items-center justify-center;
+  }
+  .partner-link {
+    @apply aspect-square bg-white flex items-center justify-center overflow-hidden rounded-full;
+  }
+  .partner-link[data-size="1"] {
+    @apply w-20;
+  }
+  .partner-link[data-size="2"] {
+    @apply w-24;
+  }
+  .partner-link[data-size="3"] {
+    @apply w-28;
+  }
+  .partner-link img {
+    @apply p-[2%];
+  }
+  .partner-link[data-size="1"] img {
+    @apply w-[calc(80px_/_1.414)];
+  }
+  .partner-link[data-size="2"] img {
+    @apply w-[calc(96px_/_1.414)];
+  }
+  .partner-link[data-size="3"] img {
+    @apply w-[calc(112px_/_1.414)];
+  }
+}
