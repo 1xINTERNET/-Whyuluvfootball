@@ -50,7 +50,8 @@ jobs:
         env:
           FASTLY_ID: ${{ secrets.fastly_id }}
           FASTLY_TOKEN: ${{ secrets.fastly_token }}
-        run: curl -XPOST "https://api.fastly.com/service/$FASTLY_ID/purge_all" \
-          -H "Fastly-Key: $FASTLY_TOKEN" \
-          -H "Accept: application/json"
+        run: |
+          curl -XPOST "https://api.fastly.com/service/$FASTLY_ID/purge_all" \
+            -H "Fastly-Key: $FASTLY_TOKEN" \
+            -H "Accept: application/json"
 
