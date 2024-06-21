@@ -1,0 +1,78 @@
+---
+
+---
+
+<div class="partner-links">
+  <div>
+    <partner-link
+      logo="/images/1xinternet.png"
+      brand="1xINTERNET"
+      url="https://1xintrnet.de/"></partner-link>
+  </div>
+  <div>
+    <partner-link
+      logo="/images/sowandsow.png"
+      brand="Sow & Sow"
+      url="https://www.sowxsow.com/"></partner-link>
+    <partner-link
+      logo="/images/c_sr.png"
+      brand="C_SR"
+      url="https://www.c-sr.org/"></partner-link>
+  </div>
+  <div>
+    <partner-link
+      logo="/images/1xinternet.png"
+      brand="fount"
+      url="https://example.com"></partner-link>
+    <partner-link
+      logo="/images/1xinternet.png"
+      brand="progressiva"
+      url="https://example.com"></partner-link>
+    <partner-link
+      logo="/images/1xinternet.png"
+      brand="büro lehmann"
+      url="https://example.com"></partner-link>
+  </div>
+  <div>
+    <partner-link
+      logo="/images/1xinternet.png"
+      brand="CRAFT BRÄU"
+      url="https://example.com"></partner-link>
+    <partner-link
+      logo="/images/tante-kathe.png"
+      brand="Tante Käthe"
+      url="https://tante-kaethe-fussballkneipe.de/"></partner-link>
+  </div>
+  <div>
+    <partner-link
+      color="#02a95c"
+      logo="/images/gofundme.png"
+      brand="GoFundMe"
+      url="https://www.gofundme.com/"></partner-link>
+    <partner-link
+      logo="/images/betterplace.png"
+      brand="Betterplace"
+      url="https://www.betterplace.org/"></partner-link>
+  </div>
+</div>
+
+<script>
+  class PartnerLink extends HTMLElement {
+    constructor() {
+      super();
+      const _randomSize = (Math.floor(Math.random() * 3) + 1).toString();
+      const a = document.createElement("a");
+      a.classList.add("partner-link");
+      a.setAttribute("data-size", _randomSize);
+      a.style.backgroundColor = this.getAttribute("color") ?? "white";
+      a.href = this.getAttribute("url");
+      a.setAttribute("target", "_blank");
+      a.setAttribute("title", this.getAttribute("brand"));
+      this.appendChild(a);
+      const img = document.createElement("img");
+      img.src = this.getAttribute("logo");
+      a.appendChild(img);
+    }
+  }
+  customElements.define("partner-link", PartnerLink);
+</script>

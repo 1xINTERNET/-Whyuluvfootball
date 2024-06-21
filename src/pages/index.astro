@@ -1,6 +1,8 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import "@styles/global.css";
+import PartnerLinks from "../components/PartnerLinks.astro";
+import PrimaryLink from "../components/PrimaryLink.astro";
 import Section from "../components/Section.astro";
 import VideoPlayer from "../components/VideoPlayer.astro";
 ---
@@ -26,8 +28,24 @@ import VideoPlayer from "../components/VideoPlayer.astro";
   >
     <VideoPlayer />
   </Section>
+  <Section backgroundColor="green" id="partners">
+    <div
+      class="flex flex-col gap-6 sm:gap-12 items-center max-w-[800px] text-center"
+    >
+      <h2>Our Partners and Collaborators</h2>
+      <p>
+        We are proud to have the support of numerous partners and supporters who
+        share our vision and have joined us in the 'WHY YOU LOVE FOOTBALL'
+        campaign. Thanks to their valuable contribution, we are one step closer
+        to achieving our goal of donating 10 million footballs to children in
+        need around the world.
+      </p>
+      <PartnerLinks />
+      <PrimaryLink href="mailto:contact@example.org" text="Become a partner" />
+    </div>
+  </Section>
   <Section
-    backgroundColor="green"
+    backgroundColor="blue"
     contentImage="/images/goal.jpeg"
     eyebrow="Donations"
     heading="Let's get every child a football."
