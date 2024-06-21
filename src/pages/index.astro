@@ -1,6 +1,9 @@
 ---
+import Hero from "../components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
 import "@styles/global.css";
+import PartnerLinks from "../components/PartnerLinks.astro";
+import PrimaryLink from "../components/PrimaryLink.astro";
 import Section from "../components/Section.astro";
 import VideoPlayer from "../components/VideoPlayer.astro";
 import HowToHelp from "../components/HowToHelp.astro";
@@ -8,6 +11,7 @@ import AboutUs from "../components/AboutUs.astro";
 ---
 
 <Layout title="Welcome to Whyuluvfootball">
+  <Hero />
   <Section
     backgroundColor="green"
     eyebrow="Our goal"
@@ -29,19 +33,30 @@ import AboutUs from "../components/AboutUs.astro";
   >
     <VideoPlayer />
   </Section>
-  <Section
-    backgroundColor="green"
-    eyebrow="How to help"
-    heading=""
-    id="how-to-help"
-  >
+  <Section backgroundColor="green" id="partners">
+    <div
+      class="flex flex-col gap-6 sm:gap-12 items-center max-w-[800px] text-center"
+    >
+      <h2>Our Partners and Collaborators</h2>
+      <p>
+        We are proud to have the support of numerous partners and supporters who
+        share our vision and have joined us in the 'WHY YOU LOVE FOOTBALL'
+        campaign. Thanks to their valuable contribution, we are one step closer
+        to achieving our goal of donating 10 million footballs to children in
+        need around the world.
+      </p>
+      <PartnerLinks />
+      <PrimaryLink href="mailto:contact@example.org" text="Become a partner" />
+    </div>
+  </Section>
+  <Section backgroundColor="blue" eyebrow="How to help" id="how-to-help">
     <HowToHelp />
   </Section>
-  <Section backgroundColor="blue" eyebrow="About us" heading="" id="about-us">
+  <Section backgroundColor="green" eyebrow="About us" id="about-us">
     <AboutUs />
   </Section>
   <Section
-    backgroundColor="green"
+    backgroundColor="blue"
     contentImage="/images/goal.jpeg"
     eyebrow="Donations"
     heading="Let's get every child a football."
