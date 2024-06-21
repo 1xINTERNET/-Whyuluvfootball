@@ -41,6 +41,10 @@
     font-display: swap;
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   h1 {
     @apply text-[64px] leading-[78px];
   }
@@ -55,7 +59,7 @@
 
   body,
   p {
-    @apply text-[18px] leading-6;
+    @apply text-[18px] leading-6 mb-4 last:mb-0;
   }
 
   @media only screen and (max-width: 640px) {
