@@ -1,6 +1,46 @@
-import type { CookieConsentConfig } from "vanilla-cookieconsent";
+import "@orestbida/iframemanager";
+import { run, getUserPreferences, acceptService } from "vanilla-cookieconsent";
 
-export const config: CookieConsentConfig = {
+const im = iframemanager();
+
+document.body.classList.add("cc--darkmode");
+
+im.run({
+  onChange: ({ changedServices, eventSource }) => {
+    if (eventSource.type === "click") {
+      const servicesToAccept = [
+        ...getUserPreferences().acceptedServices["analytics"],
+        ...changedServices,
+      ];
+
+      acceptService(servicesToAccept, "analytics");
+    }
+  },
+
+  currLang: "en",
+
+  services: {
+    youtube: {
+      embedUrl: "https://www.youtube-nocookie.com/embed/{data-id}",
+      thumbnailUrl: "https://i3.ytimg.com/vi/{data-id}/hqdefault.jpg",
+
+      iframe: {
+        allow:
+          "accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen;",
+      },
+
+      languages: {
+        en: {
+          notice:
+            'This content is hosted by a third party. By showing the external content you accept the <a rel="noreferrer noopener" href="https://www.youtube.com/t/terms" target="_blank">terms and conditions</a> of youtube.com.',
+          loadAllBtn: "Accept and Load",
+        },
+      },
+    },
+  },
+});
+
+run({
   guiOptions: {
     consentModal: {
       layout: "box inline",
@@ -21,8 +61,8 @@ export const config: CookieConsentConfig = {
       services: {
         youtube: {
           label: "Youtube Embed",
-          onAccept: () => {},
-          onReject: () => {},
+          onAccept: () => im.acceptService("youtube"),
+          onReject: () => im.rejectService("youtube"),
         },
       },
     },
@@ -67,4 +107,4 @@ export const config: CookieConsentConfig = {
       },
     },
   },
-};
+});
