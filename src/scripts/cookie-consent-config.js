@@ -73,7 +73,7 @@ run({
     translations: {
       en: {
         consentModal: {
-          title: "Hello traveller, it's cookie time!",
+          title: "Hello football fans, it's cookie time!",
           description:
             "We use cookies and other tech to enhance your website experience. With your consent, we improve usability and may share data with partners. Details, revocation options, and data transfer info are in our privacy policy.",
           acceptAllBtn: "Accept all",
@@ -89,13 +89,6 @@ run({
           closeIconLabel: "Close modal",
           serviceCounterLabel: "Service|Services",
           sections: [
-            {
-              title:
-                'Strictly Necessary Cookies <span class="pm__badge">Always Enabled</span>',
-              description:
-                "These services are essential for the correct functioning of this website. You cannot disable them here as the service would not work correctly otherwise.",
-              linkedCategory: "necessary",
-            },
             {
               title: "Analytics Cookies",
               description:
