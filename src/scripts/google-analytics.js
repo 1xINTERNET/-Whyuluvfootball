@@ -4,4 +4,4 @@ function gtag() {
 }
 gtag("js", new Date());
 
-gtag("config", import.meta.env.MEASUREMENT_ID);
+gtag("config", "G-E95B4HTX6G");
