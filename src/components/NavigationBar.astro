@@ -1,5 +1,10 @@
 ---
 import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import LanguagePicker from "@components/LanguagePicker.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <nav class="bg-transparent">
@@ -53,6 +58,9 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
         </li>
       </ul>
     </div>
+  </div>
+  <div class="container mx-auto px-4">
+    <LanguagePicker />
   </div>
 </nav>
 
