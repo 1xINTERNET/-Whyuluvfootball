@@ -24,7 +24,7 @@ export const ui = {
     "videos.more": "Weitere videos",
     "partners.title": "Unsere Partner",
     "partners.body":
-      "Wir sind eine Gruppe von Fußballfans aus verschiedenen Ländern, die die Faninitiative &quot;WHY DO YOU LOVE FOOTBALL?&quot; zur UEFA EM 2024 mit verschiedenen Unterstützern und Partnern aufgebaut haben. Wir wollen Kindern und Jugendlichen in Armut ermöglichen, Fußball zu spielen, indem sie einen eigenen Fußball erhalten.",
+      "Wir sind eine Gruppe von Fußballfans aus verschiedenen Ländern, die die Faninitiative 'WHY DO YOU LOVE FOOTBALL?' zur UEFA EM 2024 mit verschiedenen Unterstützern und Partnern aufgebaut haben. Wir wollen Kindern und Jugendlichen in Armut ermöglichen, Fußball zu spielen, indem sie einen eigenen Fußball erhalten.",
     "partners.button": "Partner werden",
     "help.eyebrow": "Mithelfen",
     "about.eyebrow": "Über uns",
