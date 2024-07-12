@@ -67,3 +67,5 @@ export const ui = {
     "footer.website": "Webseite created by",
   },
 } as const;
+
+export const showDefaultLang = false;

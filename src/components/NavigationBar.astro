@@ -1,17 +1,22 @@
 ---
 import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
-import { getLangFromUrl, useTranslations } from "@i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "@i18n/utils";
 import LanguagePicker from "@components/LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <nav class="bg-transparent">
   <div
     class="container flex flex-wrap items-center justify-between mx-auto p-4"
   >
-    <a href="/">
+    <a href={translatePath("/")}>
       <HashtagWhyULoveFootball />
     </a>
     <button id="open-mobile-menu" type="button" class="xl:hidden">
@@ -42,26 +47,27 @@ const t = useTranslations(lang);
         class="font-medium text-3xl px-4 pt-14 flex flex-col xl:p-0 xl:text-xl xl:flex-row gap-8 xl:gap-12"
       >
         <li>
-          <a href={`/${lang}/#our-goal`} class="block text-green"
+          <a href={translatePath("/#our-goal")} class="block text-green"
             >{t("nav.goal")}</a
           >
         </li>
         <li>
-          <a href={`/${lang}/#videos`} class="block text-green"
+          <a href={translatePath("/#videos")} class="block text-green"
             >{t("nav.videos")}</a
           >
         </li>
         <li>
-          <a href={`/${lang}/#partners`} class="block text-green"
+          <a href={translatePath("/#partners")} class="block text-green"
             >{t("nav.partners")}</a
           >
         </li>
         <li>
-          <a href={`/${lang}/#help`} class="block text-green">{t("nav.help")}</a
+          <a href={translatePath("/#help")} class="block text-green"
+            >{t("nav.help")}</a
           >
         </li>
         <li>
-          <a href={`/${lang}/#about`} class="block text-green"
+          <a href={translatePath("/#about")} class="block text-green"
             >{t("nav.about")}</a
           >
         </li>

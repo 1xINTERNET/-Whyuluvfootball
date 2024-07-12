@@ -1,10 +1,13 @@
 ---
-import { getLangFromUrl } from "@i18n/utils";
+import { getLangFromUrl, useTranslatedPath, getPathFromUrl } from "@i18n/utils";
 import { languages } from "@i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
-
 const newLang = lang === "de" ? "en" : "de";
+const translatePath = useTranslatedPath(newLang);
+const path = getPathFromUrl(Astro.url);
 ---
 
-<div class="text-green"><a href={`/${newLang}/`}>{languages[newLang]}</a></div>
+<div class="text-green">
+  <a href={translatePath(`/${path}`)}>{languages[newLang]}</a>
+</div>
