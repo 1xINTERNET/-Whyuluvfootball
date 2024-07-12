@@ -1,0 +1,68 @@
+---
+import Hero from "@components/Hero.astro";
+import Layout from "@layouts/Layout.astro";
+import "@styles/global.css";
+---
+
+<Layout title="Impressum">
+  <Hero />
+  <div class="container mx-auto py-8 px-4 sm:py-12 sm:px-8 lg:py-16 lg:px-28">
+    <div class="flex items-center justify-between">
+      <h1 class="mb-4">Imprint</h1>
+      <!-- <a class="hover:underline text-blue" href="/">Back</a> -->
+    </div>
+    <p>
+      Dirk von Meer<br />
+      Schönholzer Straße 13<br />
+      10115 Berlin
+    </p>
+    <h2>Kontakt</h2>
+    <p>
+      Telefon: +49 176 768 92 641<br />
+      E-Mail: <a href="mailto://dirkvonmeer@icloud.com"
+        >dirkvonmeer@icloud.com</a
+      >
+    </p>
+    <h2>Editorially responsible</h2>
+    <p>Dirk von Meer</p>
+    <h3>Liability for content</h3>
+    <p>
+      The contents of the pages were created with the greatest care. However,
+      we cannot accept any liability for the accuracy, completeness and
+      timeliness of the contents. As service providers, we are responsible for
+      our own contents on these pages in accordance with Section 7 Para. 1
+      German Telemedia Act (TMG). However, according to Sections 8 to 10 German
+      Telemedia Act (TMG), as service providers we are not obligated to monitor
+      submitted or stored third-party information or to search for circumstances
+      that indicate illegal activities. Obligations to remove or block the use
+      of information in accordance with general laws remain unaffected. In this
+      case, liability is only possible at the time of knowledge about a specific
+      violation of law.
+    </p>
+    <h3>Liability for links</h3>
+    <p>
+      Our offer contains links to external third-party websites, over whose
+      content we have no influence. Therefore, we cannot accept any liability
+      for this external content. The respective provider or operator of the
+      site is always responsible for the content of the linked pages. The
+      linked pages were checked for possible legal violations at the time of
+      linking. Illegal content was not recognizable at the time of linking.
+      However, permanent control of the content of the linked pages is not
+      reasonable without concrete evidence of a legal violation. If we become
+      aware of any legal violations, we will remove such links immediately.
+    </p>
+    <h3>Copyright</h3>
+    <p>
+      The content and works created on our pages are subject to German copyright
+      law. Duplication, processing, distribution and any type of exploitation
+      outside the limits of copyright law require the written consent of the
+      respective author or creator. Downloads and copies of this page are only
+      permitted for private, non-commercial use. Insofar as the content on this
+      page was not created by the operator, the copyrights of third parties are
+      respected. In particular, third-party content is marked as such. Should
+      you nevertheless become aware of a copyright infringement, we ask you to
+      notify us accordingly. If we become aware of any violations of law, we
+      will remove such content immediately.
+    </p>
+  </div>
+</Layout>

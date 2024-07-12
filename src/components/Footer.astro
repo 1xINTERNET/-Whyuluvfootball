@@ -3,6 +3,15 @@ import IconTiktok from "@icons/IconTiktok.astro";
 import IconYoutube from "@icons/IconYoutube.astro";
 import IconInstagram from "@icons/IconInstagram.astro";
 import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <footer class="bg-black text-white">
@@ -42,18 +51,21 @@ import HashtagWhyULoveFootball from "@components/HashtagWhyULoveFootball.astro";
         <p class="text-base">© 2024 whyuluvfootball</p>
       </div>
       <div class="flex flex-row space-x-4 text-base">
-        <a href="/privacy-policy" class="text-white hover:underline"
-          >Datenschutz</a
+        <a
+          href={translatePath("/privacy-policy")}
+          class="text-white hover:underline">{t("footer.data")}</a
         >
-        <a href="/imprint" class="text-white hover:underline">Impressum</a>
+        <a href={translatePath("/imprint")} class="text-white hover:underline"
+          >{t("footer.legal")}</a
+        >
         <button type="button" data-cc="show-preferencesModal"
-          >Consent Manager</button
+          >{t("footer.consent")}</button
         >
       </div>
       <p class="text-base">
-        Webseite erstellt von <a
-          href="https://www.1xinternet.de"
-          class="text-white hover:underline">1xINTERNET</a
+        {t("footer.website")}
+        <a href="https://www.1xinternet.de" class="text-white hover:underline"
+          >1xINTERNET</a
         >
       </p>
     </div>
